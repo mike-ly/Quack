@@ -1,0 +1,1477 @@
+/*==========================================================================*/
+/* -GENERAL START */
+/*==========================================================================*/
+
+/* GOLD: #dcba4d */
+/* INDIGO-LIGHTER: #7986cb */
+/* INDIGO-LIGHT: #5c6bc0 */
+/* INDIGO: #3f51b5 */
+/* INDIGO-DARK: #3949ab */
+/* INDIGO-DARKER: #303f9f */
+
+@font-face {}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500');
+
+body {
+	margin: 0;
+	font-family: 'Roboto', 'sans-serif';
+	color: #222222;
+	background: #fff;
+}
+
+::selection {
+  /*background: #e8f5e9;*/ /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  /*background: #e8f5e9;*/ /* Gecko Browsers */
+}
+
+* {
+  transition: all 0.15s, background 0s, color 0s;
+}
+
+a, br, .button, .noselect, .menuItemText, .menuSubtitleSpecial {
+	text-decoration: none;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+div, a, p, input, textarea {
+	box-sizing: border-box;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.mid:hover {
+	cursor: none;
+}
+
+.z-depth-0 {
+ 	box-shadow: none !important;
+}
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+ 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.z-depth-2 {
+ 	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
+
+.z-depth-3 {
+ 	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+}
+
+.z-depth-4 {
+ 	box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+}
+
+.z-depth-5 {
+ 	box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.z-index-3 {
+  z-index: 3;
+}
+
+.z-index-4 {
+  z-index: 4;
+}
+
+.contentContainer {
+  margin: 0 auto;
+  width: calc(100vw - 48px);
+  max-width: 1100px;
+  padding: auto 32px;
+}
+
+.standardText {
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 160%;
+  margin: 0;
+}
+
+.standardTextPaddingHorizontal {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.standardTextPaddingVertical {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.blueText {
+  color: #3f51b5;
+  font-weight: 500;
+}
+
+.standardDivider {
+  height: 1px;
+  background: #eceff1;
+  width: 100%;
+  margin: 8px auto;
+}
+
+.standardDivider.noMargin {
+  margin: 0px auto;
+}
+
+.standardContentContainer {
+  background: #fff;
+  margin: 0 auto 12px auto;
+  border-radius: 5px;
+  padding: 8px 0;
+}
+
+.standardContentContainer.noPadding {
+  padding: 0;
+}
+
+.standardTextFloatLeft {
+  float: left;
+  display: inline-block;
+}
+
+.standardContentPadding {
+  padding: 0 18px;
+}
+
+.standardContentFlexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.standardContentFlexRow.spaceBetween {
+  justify-content: space-between;
+}
+
+.coloredHeaderContentContainer {
+  background: #fff;
+  margin: 0 auto 12px auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.coloredHeader {
+  display: block;
+  background: #3f51b5;
+  padding: 8px 18px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.coloredHeader:hover {
+  background: #303f9f;
+}
+
+.standardClear {
+  clear: both;
+}
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.modalBackground {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #222222;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0s;
+}
+
+.modalContainer.active > .modalBackground {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(24px);
+  transition: all 0.4s;
+}
+
+.modal .writeReviewContainer {
+  margin: 0;
+}
+
+.modal.writeReviewModal {
+  width: 90%;
+  max-width: 600px;
+}
+
+.modalContainer.active > .modal {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: all 0.4s 0.1s;
+}
+
+.flexDivider {
+  width: 100%;
+}
+
+/*==========================================================================*/
+/* -GENERAL END */
+/*==========================================================================*/
+/*==========================================================================*/
+/* -APP START */
+/*==========================================================================*/
+
+.appContainer {
+  background: #eceff1;
+  padding-top: 52px;
+  height: 100%;
+  width: 100%;
+}
+
+.appContentContainer {
+  min-height: calc(100vh - 52px);
+  margin: 0 auto;
+  width: calc(100vw - 48px);
+  max-width: 1100px;
+  padding-top: 24px;
+  display: grid;
+  grid-gap: 18px;
+  grid-template:
+    [row1-start] "c1 c2" auto [row1-end]
+    /60fr 40fr;
+}
+
+/*==========================================================================*/
+/* -APP END */
+/*==========================================================================*/
+/*==========================================================================*/
+/* -NAVBAR START */
+/*==========================================================================*/
+
+.navBarGeneralContainer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 24px;
+  height: 52px;
+  background: #fff;
+  border-bottom: 1px solid #cfd8dc;
+  z-index: 4;
+}
+
+.navBarContentContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBarSectionLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+.navBarSectionRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: auto;
+}
+
+.navBarLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 16px;
+  position: relative;
+}
+
+.navBarLinkUnderline {
+  position: absolute;
+  height: 1px;
+  width: 0%;
+  bottom: 0;
+  background: #3f51b5;
+  transition: all 0.15s;
+}
+
+.navBarLinkText {
+  color: #b0bec5;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  transition: all 0.15s;
+}
+
+.navBarLink.active > .navBarLinkText, .navBarLink:hover > .navBarLinkText {
+  color: #3f51b5;
+}
+
+.navBarLink.active > .navBarLinkUnderline, .navBarLink:hover > .navBarLinkUnderline {
+  width: 100%;
+  height: 2px;
+}
+
+.navBarLogo {
+  height: 24px;
+  width: 24px;
+  margin-right: 16px;
+  /*left: calc(50% - 12px);*/
+}
+
+/*==========================================================================*/
+/* -NAVBAR END */
+/*==========================================================================*/
+/*==========================================================================*/
+/* -FILTERBAR START */
+/*==========================================================================*/
+
+.filterBarGeneralContainer {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  height: 47px;
+  border-bottom: 1px solid #cfd8dc;
+  z-index: 3;
+}
+
+.filterBarContentContainer {
+  height: 46px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.filterBarActivationDivider {
+  height: 100%;
+  margin: 0;
+  width: 1px;
+  background: #eceff1;
+}
+
+.filterBarSectionContainer {
+  height: 38px;
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.filterBarActivationContainer {
+  display: flex;
+  height: 100%;
+  margin: 0 4px;
+  padding: 0 12px;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.filterBarActivationContainer:hover {
+  cursor: auto;
+}
+
+.filterBarActivationContainer.active:hover {
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.filterBarActivationContainer.active .filterBarName {
+  color: #3f51b5;
+}
+
+.filterBarName {
+  height: 24px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #757575;
+  line-height: 24px;
+  margin: 0 4px;
+}
+
+.filterBarActivationButton {
+  height: 24px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #3f51b5;  
+  line-height: 24px;
+  margin: 0 4px;
+}
+
+.filterBarOptionsContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 46px;
+  left: 4px;
+  min-width: calc(100% - 8px);
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-24px);
+  z-index: -1;
+}
+
+.filterBarOptionsContainer.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.filterBarOption {
+  display: block;
+  padding: 12px 12px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.filterBarOption.active {
+  background: #fafafa;
+}
+
+.filterBarOption.active > .filterBarOptionText {
+  color: #3f51b5 !important;
+  font-weight: 500;
+}
+
+.filterBarOption:hover {
+  background: #f5f5f5;
+}
+
+.filterBarOption:hover > .filterBarOptionText {
+  color: #222222;
+}
+
+.filterBarOptionText {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #bdbdbd;
+  letter-spacing: 0.4px;
+}
+
+.filterBarOptionsBackDiv {
+  position: relative;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.2;
+  visibility: hidden;
+  background: #222222;
+  z-index: -2;
+  transition: all 0;
+}
+
+.filterBarOptionsBackDiv.active {
+  opacity: 0.2;
+  visibility: visible;
+}
+
+/*==========================================================================*/
+/* -FILTERBAR END */
+/*==========================================================================*/
+/*==========================================================================*/
+/* -FOOTER START */
+/*==========================================================================*/
+
+.footerText {
+  color: #bdbdbd;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.footerText a:hover {
+  text-decoration: underline;
+}
+
+/*==========================================================================*/
+/* -FOOTER END */
+/*==========================================================================*/
+/*==========================================================================*/
+/* -STATIC START */
+/*==========================================================================*/
+
+.staticGeneralContainer {
+  grid-area: 'c2';
+  width: 100%;
+}
+
+.menuDatesContainer {
+  padding: 8px 8px 4px 8px;
+  background: #f5f5f5;
+}
+
+.menuDateItemText {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  margin: 0 4px 4px 0;
+  padding: 8px 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  height: 32px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.menuDateItemText.active {
+  background: #9e9e9e !important;
+}
+
+.menuDateItemText:hover {
+  background: #bdbdbd;
+}
+
+.menuTitlesContainer {
+  padding: 8px 8px 4px 8px;
+}
+
+/*.menuTitle {
+  color: #bdbdbd;
+  display: block;
+  font-weight: 500;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 5px;
+  background: #fafafa;
+}*/
+
+.menuTitle {
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  margin: 0 4px 4px 0;
+  margin-bottom: 4px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 5px;
+  background: #e0e0e0;
+  vertical-align: top;
+  text-align: center;
+}
+
+.menuTitle:hover, .menuTitle.active:hover {
+  background: #bdbdbd;
+}
+
+.menuTitle.active {
+  background: #2196f3 !important;
+}
+
+.menuTitle.active:hover {
+  /*cursor: auto;*/
+}
+
+.menuContainer {
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  text-align: left;
+  padding: 0 24px;
+}
+
+.menuContainer.active {
+  height: auto;
+  opacity: 1;
+  padding: 16px 24px 12px 24px;
+}
+
+.generalMenuContainer {
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  text-align: left;
+}
+
+.generalMenuContainer.active {
+  height: auto;
+  opacity: 1;
+}
+
+.menuItemText {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  margin: 0 4px 4px 0;
+  padding: 8px 42px 8px 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  height: 32px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  background: #9e9e9e;
+  border-radius: 5px;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+/*.menuItemText.active {
+  padding-right: 42px;
+}*/
+
+.menuItemText > p {
+  margin: 0;
+}
+
+.menuItemText.one {
+  background: #ef5350;
+}
+
+.menuItemText.two {
+  background: #ffa726;
+}
+
+.menuItemText.three {
+  background: #9e9e9e;
+}
+
+.menuItemText.four {
+  background: #c0ca33;
+}
+
+.menuItemText.five {
+  background: #66bb6a;
+}
+
+.scoreText {
+  height: 48px;
+  line-height: 48px;
+}
+
+.menuSubtitle {
+  display: inline-block;
+  font-weight: 300;
+  color: #bdbdbd;
+  background: #fff;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-bottom: 12px;
+  margin-left: 12px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.7px;
+}
+
+.menuSubtitleSpecial {
+  display: inline-block;
+  font-weight: 300;
+  color: #bdbdbd;
+  background: #fff;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-bottom: 12px;
+  margin-left: 16px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.7px;
+  border-radius: 5px;
+  border: 1px solid #eceff1;
+  height: 21px;
+  line-height: 21px;
+}
+
+.menuSubtitleGeneral {
+  display: inline-block;
+  font-weight: 300;
+  color: #bdbdbd;
+  background: #fff;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-bottom: 12px;
+  margin-left: 16px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.7px;
+  border-radius: 5px;
+  border: 1px solid #eceff1;
+  height: 21px;
+  line-height: 21px;
+}
+
+a.menuSubtitleGeneral:hover {
+  background: #eceff1;
+}
+
+.menuSubtitleGeneralContainer {
+  height: 21px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuSubtitleGeneralIconContainer {
+  height: 21px;
+  margin-top: -2px;
+  transition: 0.1s;
+  background-color: transparent;
+}
+
+.menuSubtitleGeneralIconContainer > i {
+  line-height: 21px;
+  height: 21px;
+}
+
+.menuSubtitleGeneralIconContainer.active {
+  transform: rotate(180deg) !important;
+}
+
+.menuDivider {
+  margin: 12px 0 -11px 0;
+  height: 1px;
+}
+
+.menuSectionDivider {
+  height: 16px;
+  width: 100%;
+}
+
+.menuItemRateContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 10px;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(24px);
+}
+
+.menuItemRateBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.menuItemText:hover > .menuItemRateContainer {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.menuItemText:hover > .menuItemRateContainer > .menuItemRateBackground {
+  opacity: 1;
+}
+
+.menuItemText:hover > .menuItemRateContainer > .menuItemRateBackground.active {
+  opacity: 1;
+}
+
+.menuItemRateThumb {
+  opacity: 0.7;
+  height: 16px;
+}
+
+.menuItemRateThumb > * {
+  line-height: 100% !important;
+}
+
+.menuItemRateThumb:hover {
+  opacity: 1;
+  transform: rotate(-10deg);
+}
+
+.menuItemRateThumb.active {
+  opacity: 1;
+  transform: rotate(-30deg);
+}
+
+.menuItemRateThumb.inactive {
+  opacity: 0.5;
+}
+
+.menuItemRatedContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  height: calc(100% - 4px);
+  padding: 0 8px;
+  background: #fff;
+  border-radius: 4px;
+  opacity: 0.5;
+}
+
+.menuItemRatedContainer.active {
+  opacity: 1;
+}
+
+.menuItemRatedContainer.active > .menuItemRatedThumb {
+  transform: rotate(-30deg);
+}
+
+.menuItemRatedThumb {
+  opacity: 1;
+  height: 16px;
+}
+
+/*==========================================================================*/
+/* -STATIC END */
+/*==========================================================================*/
+
+/*==========================================================================*/
+/* -HOME START */
+/*==========================================================================*/
+
+.homeGeneralContainer {
+  grid-area: 'c1';
+  width: 100%;
+  padding-bottom: 32px;
+}
+
+.homeOverviewToday {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.homeOverviewDate {
+  color: #9e9e9e;
+  font-weight: 100;
+}
+
+.homeOverviewScoreContainer {
+  position: relative;
+  justify-content: space-between;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.homeOverviewScoreTitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  height: 28px;
+  min-width: 100px;
+  color: #9e9e9e;
+}
+
+.homeOverviewScoreTime {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 28px;
+  height: 28px;
+  min-width: 100px;
+  color: #9e9e9e;
+  margin-right: 12px;
+}
+
+.homeOverviewScoreTime > .pulseBlue {
+  font-weight: 500;
+  font-size: 15px;
+  animation: pulseBlue 3s infinite;
+}
+
+@keyframes pulseBlue {
+  0% {
+    color: #2196f3;
+  }
+  40% {
+    color: #9e9e9e;
+  }
+  80% {
+    color: #2196f3;
+  }
+  100% {
+    color: #2196f3;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0.05;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.homeOverviewActiveIcon {
+  animation: pulse 2.5s infinite;
+  color: #2196f3;
+  font-size: 36px;
+  line-height: 28px;
+  display: block;
+  margin: 0 4px 0 0;
+  position: absolute;
+}
+
+.homeOverviewScoreValue {
+  font-size: 16px;
+  color: #bdbdbd;
+  font-weight: 400;
+}
+
+.homeOverviewScoreDenominator {
+  font-weight: 300;
+  font-size: 14px;
+  color: #bdbdbd;
+}
+
+.homeOverviewScoreReviewCount {
+  font-weight: 200;
+}
+
+.homeOverviewStatus {
+  margin-top: 12px;
+  font-size: 18px;
+  color: #757575;
+  font-weight: 100;
+  line-height: 100%;
+}
+
+.homeContentContainerStatus {
+  padding-top: 22px;
+  padding-bottom: 12px;
+}
+
+
+/*==========================================================================*/
+/* -HOME END */
+/*==========================================================================*/
+
+/*==========================================================================*/
+/* -GREETING START */
+/*==========================================================================*/
+
+.greetingContainer {
+  padding: 16px;
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+.standardText.greetingText.greetingHeaderText {
+  font-weight: 300;
+  font-size: 20px;
+  color: #7986cb;
+  margin-bottom: 2px;
+}
+
+.standardText.greetingText.statusText {
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 16px;
+  line-height: 100%;
+  color: #616161;
+}
+
+.standardText.greetingText {
+  color: #757575;
+}
+
+.standardText.greetingText > span {
+  font-weight: 500;
+}
+
+/*==========================================================================*/
+/* -GREETING END */
+/*==========================================================================*/
+
+/*==========================================================================*/
+/* -REVIEW START */
+/*==========================================================================*/
+
+.writeReviewContainer {
+  margin-top: 20px;
+  padding: 8px;
+  position: relative;
+  background: #fff;
+}
+
+.writeReviewInput {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 13px 13px 13px 13px;
+  border-radius: 5px;
+  border: 2px solid #e0e0e0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  resize: none;
+  letter-spacing: 0.5px;
+  background: #fafafa;
+  transition: border 0.1s, padding 0.1s;
+}
+
+.writeReviewInput::placeholder {
+  color: #bdbdbd;
+}
+
+.writeReviewInput:focus {
+  border: 2px solid #2196f3;
+  outline: none;
+}
+
+
+.standardText.writeReviewDescriptionText {
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #9e9e9e;
+}
+
+.writeReviewBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.writeReviewFlexDivider {
+  margin-top: 8px;
+  margin-left: auto;
+  padding-top: 8px;
+  border-top: 1px solid #eceff1;
+}
+
+.writeReviewFlexDivider.noTopMargin {
+  margin-top: 0;
+}
+
+.writeReviewFlexDivider.noBottomMargin {
+  padding-top: 0;
+}
+
+.writeReviewScoreBar {
+  height: 24px;
+}
+
+.reviewDate {
+  color: #bdbdbd;
+}
+
+.writeReviewScoreTitle {
+  line-height: 32px;
+  margin-right: 6px;
+  margin-left: 8px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #9e9e9e;
+}
+
+.writeReviewScoreDenominator {
+  line-height: 32px;
+  margin-right: 6px;
+  margin-left: 8px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+
+.writeReviewDisplayScoreBar {
+  height: 32px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.writeReviewDisplayScoreBarUnit {
+  position: relative;
+  height: 100%;
+  width: 33px;
+}
+
+.writeReviewDisplayScoreBarUnitFill {
+  height: 100%;
+  width: 32px;
+  background: #bdbdbd;
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+  font-weight: 500;
+  border: 0px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+.writeReviewDisplayScoreBarUnitFill.filled {
+  background: #5c6bc0;
+  color: #7986cb;
+}
+
+.writeReviewDisplayScoreBarUnitFill.active {
+  background: #5c6bc0 !important;
+  color: #fff !important;
+}
+
+.writeReviewDisplayScoreBarUnit:hover > .writeReviewDisplayScoreBarUnitFill {
+  background: #3f51b5;
+  color: #fff;
+}
+
+#writeReviewDisplayScoreBarUnit2:hover ~ #writeReviewDisplayScoreBarUnit1 > .writeReviewDisplayScoreBarUnitFill
+{
+  background: #3f51b5;
+  color: #7986cb;
+}
+
+#writeReviewDisplayScoreBarUnit3:hover ~ #writeReviewDisplayScoreBarUnit2 > .writeReviewDisplayScoreBarUnitFill,
+#writeReviewDisplayScoreBarUnit3:hover ~ #writeReviewDisplayScoreBarUnit1 > .writeReviewDisplayScoreBarUnitFill
+{
+  background: #3f51b5;
+  color: #7986cb;
+}
+
+#writeReviewDisplayScoreBarUnit4:hover ~ #writeReviewDisplayScoreBarUnit3 > .writeReviewDisplayScoreBarUnitFill,
+#writeReviewDisplayScoreBarUnit4:hover ~ #writeReviewDisplayScoreBarUnit2 > .writeReviewDisplayScoreBarUnitFill,
+#writeReviewDisplayScoreBarUnit4:hover ~ #writeReviewDisplayScoreBarUnit1 > .writeReviewDisplayScoreBarUnitFill
+{
+  background: #3f51b5;
+  color: #7986cb;
+}
+
+#writeReviewDisplayScoreBarUnit5:hover ~ #writeReviewDisplayScoreBarUnit4 > .writeReviewDisplayScoreBarUnitFill,
+#writeReviewDisplayScoreBarUnit5:hover ~ #writeReviewDisplayScoreBarUnit3 > .writeReviewDisplayScoreBarUnitFill,
+#writeReviewDisplayScoreBarUnit5:hover ~ #writeReviewDisplayScoreBarUnit2 > .writeReviewDisplayScoreBarUnitFill,
+#writeReviewDisplayScoreBarUnit5:hover ~ #writeReviewDisplayScoreBarUnit1 > .writeReviewDisplayScoreBarUnitFill
+{
+  background: #3f51b5;
+  color: #7986cb;
+}
+
+.writeReviewDisplayScoreBarDivider {
+  height: 100%;
+  width: 1px;
+  background: transparent;
+}
+
+.displayScoreBar {
+  height: 28px;
+  display: flex;
+  flex-direction: row;
+}
+
+.displayScoreBarUnit {
+  position: relative;
+  height: 100%;
+  width: 28px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.displayScoreBarUnitFill {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.displayScoreBarUnitFill.one {
+  background: #ef5350;
+}
+
+.displayScoreBarUnitFill.two {
+  background: #ffa726;
+}
+
+.displayScoreBarUnitFill.three {
+  background: #fdd835;
+}
+
+.displayScoreBarUnitFill.four {
+  background: #c0ca33;
+}
+
+.displayScoreBarUnitFill.five {
+  background: #66bb6a;
+}
+
+.displayScoreBarDivider {
+  height: 100%;
+  width: 1px;
+  background: transparent;
+}
+
+.writeReviewFilterBarContainer {
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 46px;
+}
+
+.writeReviewVerticalDivider {
+  height: 26px;
+  border-left: 1px solid #eceff1;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.writeReviewLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 18px;
+  background: #3f51b5;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  opacity: 1;
+  margin-left: auto;
+}
+
+.writeReviewLink.inactive {
+  opacity: 0.5;
+}
+
+.writeReviewLink.inactive:hover {
+  background: #5c6bc0;
+  cursor: auto;
+}
+
+.writeReviewLink:hover {
+  background: #303f9f;
+}
+
+.writeReviewLink.navBarWriteReviewLink {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-6px);
+}
+
+.writeReviewLink.navBarWriteReviewLink.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.writeReviewIcon {
+  color: #3f51b5 !important;
+  background: #3f51b5 !important;
+}
+
+.writeReviewStatusFlexRow {
+  min-width: 1px;
+}
+
+.writeReviewStatusScoreContainer {
+  height: 32px;
+  background: #bdbdbd;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 3px;
+}
+
+.writeReviewStatusText {
+  font-size: 12px;
+  color: #bdbdbd;
+  text-transform: uppercase;
+  line-height: 28px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.writeReviewStatusContainer {
+  height: 32px;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 3px;
+  background: #fff;
+  overflow: hidden;
+  margin-right: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.writeReviewStatusContainer.neutral {
+  border: 2px solid #f5f5f5;
+}
+
+.writeReviewStatusContainer.pass {
+  border: 2px solid #66bb6a;
+  background: #66bb6a;
+  width: auto;
+  opacity: 1;
+  font-weight: 500;
+}
+
+.writeReviewStatusContainer.pass > .writeReviewStatusText {
+  color: #fff;
+  font-weight: 500;
+}
+
+.writeReviewStatusContainer.neutral.warned {
+  border: 2px solid #ef5350;
+  width: auto;
+  opacity: 1;
+}
+
+.writeReviewStatusContainer.neutral.warned > .writeReviewStatusText {
+  color: #ef5350;
+  font-weight: 500;
+}
+
+/*==========================================================================*/
+/* -REVIEW END */
+/*==========================================================================*/
+
+/*==========================================================================*/
+/* -STATS START */
+/*==========================================================================*/
+
+.statContainer {
+  display: block;
+  background: #fff;
+}
+
+div > .statContainer:hover {
+  background: #fafafa;
+}
+
+.statContainer.odd {
+  background: #fff;
+}
+
+.statContainer.even {
+  background: #fafafa;
+}
+
+.statGrid {
+  padding: 8px;
+  display: grid;
+  grid-gap: 0px;
+  grid-template:
+    [row1-start] "c1 c2" auto [row1-end]
+    /54px 1fr;
+}
+
+.statDateContainer {
+  grid-area: "c1";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.statDate {
+  height: 46px;
+  width: 46px;
+  border-radius: 5px;
+  background: #fff;
+  overflow: hidden;
+  border: 1px solid #f5f5f5;
+}
+
+.statDateMonth {
+  height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+  background: #e57373;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.statDateDay {
+  height: 26px;
+  line-height: 26px;
+  font-size: 16px;
+  color: #222222;
+  background: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+.statInfoContainer {
+  grid-area: "c2";
+  padding-left: 12px;
+  padding-top: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+/*==========================================================================*/
+/* -STATS END */
+/*==========================================================================*/
