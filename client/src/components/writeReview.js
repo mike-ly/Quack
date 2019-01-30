@@ -159,7 +159,7 @@ class WriteReview extends React.Component {
     let textStatusText = this.state.reviewTextValue.length === 0 ? "Text required" : (this.state.reviewTextValue.length + "/" + this.reviewCharacterLimit);
 
     return(
-      <div className="standardContentContainer writeReviewContainer">
+      <div className="standardContentContainer writeReviewContainer bottomBorder">
         <TextareaAutosize 
           maxRows={10} 
           autoFocus 

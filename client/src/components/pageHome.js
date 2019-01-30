@@ -65,11 +65,19 @@ class HomePage extends React.Component {
     console.log("RENDER: HomePage");
     return(
       <div className="homeGeneralContainer">
-        <div className="standardContentContainer homeContentContainerStatus z-depth-1">
+        {/*
+        <div className="standardContentContainer transparent">
+          <p className="standardText standardTextPaddingHorizontal">
+            <span className="homeOverviewToday">Emory University</span>
+          </p>
+        </div>
+        */}
+
+        <div className="coloredHeaderContentContainer z-depth-3">
+          <div className="standardHeader standardText">{this.state.day}, {this.state.month} {this.state.dateNumber}</div>
+
+          {/*
           <div className="standardContentFlexRow">
-            <p className="standardText standardTextPaddingHorizontal">
-              <span className="homeOverviewToday">Emory University</span>
-            </p>
             <p className="standardText">
               <span className="homeOverviewToday"><span className="homeOverviewDate">&bull;</span></span>
             </p>
@@ -78,57 +86,60 @@ class HomePage extends React.Component {
             </p>
           </div>
           <div className="standardDivider"></div>
-          <div className="standardContentPadding standardContentFlexRow homeOverviewScoreContainer">
-            <p className="standardText homeOverviewScoreTitle">Breakfast</p>
-            <div className="standardContentFlexRow">
-              <p className="standardText homeOverviewScoreTime">
-                <span className={this.state.activeMeal === "preBreakfast" || this.state.activeMeal === "breakfast" ? "pulseBlue" : ""}>
-                  {this.dateToTimeString(this.props.mealTimes.breakfastStart)}
-                </span> 
-                <span className={this.state.activeMeal === "breakfast" ? "pulseBlue" : ""}> &mdash; </span> 
-                <span className={this.state.activeMeal === "breakfast" ? "pulseBlue" : ""}>
-                  {this.dateToTimeString(this.props.mealTimes.breakfastEnd)}
-                </span>
-              </p>
-              <RateBar
-                score={Math.random() * 5}
-              />
+          */}
+          <div className="homeContentContainerStatus">
+            <div className="standardContentPadding standardContentFlexRow homeOverviewScoreContainer">
+              <p className="standardText homeOverviewScoreTitle">Breakfast</p>
+              <div className="standardContentFlexRow">
+                <p className="standardText homeOverviewScoreTime">
+                  <span className={this.state.activeMeal === "preBreakfast" || this.state.activeMeal === "breakfast" ? "pulseBlue" : ""}>
+                    {this.dateToTimeString(this.props.mealTimes.breakfastStart)}
+                  </span> 
+                  <span className={this.state.activeMeal === "breakfast" ? "pulseBlue" : ""}> &mdash; </span> 
+                  <span className={this.state.activeMeal === "breakfast" ? "pulseBlue" : ""}>
+                    {this.dateToTimeString(this.props.mealTimes.breakfastEnd)}
+                  </span>
+                </p>
+                <RateBar
+                  score={Math.random() * 5}
+                />
+              </div>
             </div>
-          </div>
-          <div className="standardContentPadding"><div className="standardDivider"></div></div>
-          <div className="standardContentPadding standardContentFlexRow homeOverviewScoreContainer">
-            <p className="standardText homeOverviewScoreTitle">Lunch</p>
-            <div className="standardContentFlexRow">
-              <p className="standardText homeOverviewScoreTime">
-                <span className={this.state.activeMeal === "preLunch" || this.state.activeMeal === "lunch" ? "pulseBlue" : ""}>
-                  {this.dateToTimeString(this.props.mealTimes.lunchStart)}
-                </span> 
-                <span className={this.state.activeMeal === "lunch" ? "pulseBlue" : ""}> &mdash; </span> 
-                <span className={this.state.activeMeal === "lunch" ? "pulseBlue" : ""}>
-                  {this.dateToTimeString(this.props.mealTimes.lunchEnd)}
-                </span>
-              </p>
-              <RateBar
-                score={Math.random() * 5}
-              />
+            <div className="standardContentPadding"><div className="standardDivider"></div></div>
+            <div className="standardContentPadding standardContentFlexRow homeOverviewScoreContainer">
+              <p className="standardText homeOverviewScoreTitle">Lunch</p>
+              <div className="standardContentFlexRow">
+                <p className="standardText homeOverviewScoreTime">
+                  <span className={this.state.activeMeal === "preLunch" || this.state.activeMeal === "lunch" ? "pulseBlue" : ""}>
+                    {this.dateToTimeString(this.props.mealTimes.lunchStart)}
+                  </span> 
+                  <span className={this.state.activeMeal === "lunch" ? "pulseBlue" : ""}> &mdash; </span> 
+                  <span className={this.state.activeMeal === "lunch" ? "pulseBlue" : ""}>
+                    {this.dateToTimeString(this.props.mealTimes.lunchEnd)}
+                  </span>
+                </p>
+                <RateBar
+                  score={Math.random() * 5}
+                />
+              </div>
             </div>
-          </div>
-          <div className="standardContentPadding"><div className="standardDivider"></div></div>
-          <div className="standardContentPadding standardContentFlexRow homeOverviewScoreContainer">
-            <p className="standardText homeOverviewScoreTitle">Dinner</p>
-            <div className="standardContentFlexRow">
-              <p className="standardText homeOverviewScoreTime">
-                <span className={this.state.activeMeal === "preDinner" || this.state.activeMeal === "dinner" ? "pulseBlue" : ""}>
-                  {this.dateToTimeString(this.props.mealTimes.dinnerStart)}
-                </span> 
-                <span className={this.state.activeMeal === "dinner" ? "pulseBlue" : ""}> &mdash; </span> 
-                <span className={this.state.activeMeal === "dinner" ? "pulseBlue" : ""}>
-                  {this.dateToTimeString(this.props.mealTimes.dinnerEnd)}
-                </span>
-              </p>
-              <RateBar
-                score={Math.random() * 5}
-              />
+            <div className="standardContentPadding"><div className="standardDivider"></div></div>
+            <div className="standardContentPadding standardContentFlexRow homeOverviewScoreContainer">
+              <p className="standardText homeOverviewScoreTitle">Dinner</p>
+              <div className="standardContentFlexRow">
+                <p className="standardText homeOverviewScoreTime">
+                  <span className={this.state.activeMeal === "preDinner" || this.state.activeMeal === "dinner" ? "pulseBlue" : ""}>
+                    {this.dateToTimeString(this.props.mealTimes.dinnerStart)}
+                  </span> 
+                  <span className={this.state.activeMeal === "dinner" ? "pulseBlue" : ""}> &mdash; </span> 
+                  <span className={this.state.activeMeal === "dinner" ? "pulseBlue" : ""}>
+                    {this.dateToTimeString(this.props.mealTimes.dinnerEnd)}
+                  </span>
+                </p>
+                <RateBar
+                  score={Math.random() * 5}
+                />
+              </div>
             </div>
           </div>
           <div className="standardClear"></div>
@@ -141,7 +152,7 @@ class HomePage extends React.Component {
             <WriteReview/>
           </div>
         </Waypoint>
-        <div className="standardContentContainer">
+        <div className="standardContentContainer bottomBorder">
           {/*
           <p className="standardText standardTextPaddingHorizontal standardTextPaddingVertical">
             <b>Goofy Goose</b>

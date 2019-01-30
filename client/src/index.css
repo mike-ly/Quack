@@ -147,8 +147,17 @@ a:hover {
   padding: 8px 0;
 }
 
+.standardContentContainer.bottomBorder {
+  /*border-bottom: 2px solid #7986cb;*/
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
 .standardContentContainer.noPadding {
   padding: 0;
+}
+
+.standardContentContainer.transparent {
+  background: transparent;
 }
 
 .standardTextFloatLeft {
@@ -176,6 +185,14 @@ a:hover {
   margin: 0 auto 12px auto;
   border-radius: 5px;
   overflow: hidden;
+}
+
+.standardHeader {
+  display: block;
+  background: #90a4ae;
+  padding: 8px 18px;
+  color: #fff;
+  font-weight: 300;
 }
 
 .coloredHeader {
@@ -260,6 +277,7 @@ a:hover {
 
 .appContainer {
   background: #eceff1;
+  /*background: #eeeeee*/;
   padding-top: 52px;
   height: 100%;
   width: 100%;
@@ -575,23 +593,13 @@ a:hover {
 
 .menuTitlesContainer {
   padding: 8px 8px 4px 8px;
+  background: #90a4ae;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
-/*.menuTitle {
-  color: #bdbdbd;
-  display: block;
-  font-weight: 500;
-  margin-left: 4px;
-  margin-right: 4px;
-  margin-bottom: 4px;
-  height: 36px;
-  line-height: 36px;
-  border-radius: 5px;
-  background: #fafafa;
-}*/
-
 .menuTitle {
-  color: #fff;
+  color: #90a4ae;
   display: inline-block;
   font-weight: 500;
   margin: 0 4px 4px 0;
@@ -599,17 +607,17 @@ a:hover {
   height: 32px;
   line-height: 32px;
   border-radius: 5px;
-  background: #e0e0e0;
+  background: #b0bec5;
   vertical-align: top;
   text-align: center;
 }
 
 .menuTitle:hover, .menuTitle.active:hover {
-  background: #bdbdbd;
+  background: #cfd8dc;
 }
 
 .menuTitle.active {
-  background: #2196f3 !important;
+  background: #fff  !important;
 }
 
 .menuTitle.active:hover {
@@ -646,7 +654,6 @@ a:hover {
 
 .menuItemText {
   position: relative;
-  display: inline-block;
   color: #fff;
   margin: 0 4px 4px 0;
   padding: 8px 42px 8px 10px;
@@ -730,17 +737,17 @@ a:hover {
 .menuSubtitleGeneral {
   display: inline-block;
   font-weight: 300;
-  color: #bdbdbd;
-  background: #fff;
+  color: #fff;
+  background: #90a4ae;
   padding-right: 8px;
   padding-left: 8px;
   margin-bottom: 12px;
-  margin-left: 16px;
+  margin-left: 0;
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 0.7px;
   border-radius: 5px;
-  border: 1px solid #eceff1;
+  border: 1px solid #90a4ae;
   height: 21px;
   line-height: 21px;
 }
@@ -776,6 +783,7 @@ a.menuSubtitleGeneral:hover {
 .menuDivider {
   margin: 12px 0 -11px 0;
   height: 1px;
+  border-top: 1px solid #90a4ae;
 }
 
 .menuSectionDivider {
@@ -793,8 +801,6 @@ a.menuSubtitleGeneral:hover {
   top: 0;
   padding: 0 10px;
   height: 100%;
-  opacity: 0;
-  transform: translateX(24px);
 }
 
 .menuItemRateBackground {
@@ -807,12 +813,6 @@ a.menuSubtitleGeneral:hover {
   width: 100%;
   z-index: -1;
 }
-
-.menuItemText:hover > .menuItemRateContainer {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 
 .menuItemText:hover > .menuItemRateContainer > .menuItemRateBackground {
   opacity: 1;
@@ -995,7 +995,7 @@ a.menuSubtitleGeneral:hover {
 }
 
 .homeContentContainerStatus {
-  padding-top: 22px;
+  padding-top: 12px;
   padding-bottom: 12px;
 }
 
@@ -1013,12 +1013,13 @@ a.menuSubtitleGeneral:hover {
   background: #fff;
   border-radius: 5px;
   margin-bottom: 12px;
+  /*border-top: 2px solid #7986cb;*/
 }
 
 .standardText.greetingText.greetingHeaderText {
-  font-weight: 300;
-  font-size: 20px;
-  color: #7986cb;
+  font-weight: 400;
+  font-size: 18px;
+  color: #5c6bc0;
   margin-bottom: 2px;
 }
 

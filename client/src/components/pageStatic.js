@@ -123,13 +123,15 @@ class StaticPage extends React.Component {
   render() {
     return(
       <div className="staticGeneralContainer">
-        <div className="greetingContainer">
+        <div className="greetingContainer z-depth-2">
           <p className="standardText greetingText greetingHeaderText">{this.generateGreeting(this.decideActiveMeal(new Date(), this.props.mealTimes))}</p>
           <p className="standardText greetingText statusText">{this.state.mealStatus}</p>
           <p className="standardText greetingText">Check out the <span>menu</span>, <span>ratings</span>, and <span>reviews</span> before you decide where to eat, and <span>Quack</span> about your meal after!</p>
         </div>
-        <div className="coloredHeaderContentContainer">
-          <div className="coloredHeader standardText">Menu</div>
+        <div className="standardContentContainer noPadding bottomBorder">
+          {/*
+          <div className="standardHeader standardText">Menu</div>
+          */}
           {/*
           <div className="menuDatesContainer">
             <a className="standardText menuDateItemText active">Today</a>
@@ -142,15 +144,18 @@ class StaticPage extends React.Component {
           <div className="flexDivider"></div>
           <DailyMenus
             onClick={(meal) => this.handleMenuClick()}
+            eatery='DUCling'
           />
         </div>
+        {/*
         <div className="coloredHeaderContentContainer">
-          <div className="coloredHeader standardText">Stats</div>
+          <div className="standardHeader standardText">Stats</div>
           <DailyStats
               onClick={(meal) => this.handleMenuClick()}
           />
         </div>
-        <div className="standardContentContainer">
+        */}
+        <div className="standardContentContainer bottomBorder">
           <Footer/>
         </div>
       </div>

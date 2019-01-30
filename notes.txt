@@ -1,0 +1,47 @@
+SCHOOL:
+{
+	'name': <String>,
+	'eateries': [<Eatery ID's>]
+}
+
+EATERY:
+{
+	'name': <String>,
+	'school': <String>,
+	'menu_isdynamic': <Boolean>
+}
+
+MENU:
+{
+	'eatery': <Eatery ID>,
+	'date': <Date>,
+	'submenus': {
+		'submenu_name_i': [<Food ID's>]
+	}
+}
+
+FOOD:
+{
+	'name': <String>,
+	'upvotes_count': <String>,
+	'downvotes_count': <String>
+}
+
+OVERVIEW:
+{
+	'eatery': <Eatery ID>,
+	'date': <Date>,
+	'review_count': <Integer>,
+	'score': <Integer>,
+}
+
+REVIEW:
+{
+	'name': <String>,
+	'shcool': <School ID>,
+	'eatery': <Eatery ID>,
+	'category': <Category ID>,
+	'score': <Integer>,
+	'text': <String>,
+	'date': <Date>,
+}
